@@ -6,7 +6,7 @@ export const useNewsletterEntries = (page = 1, pageSize = 9, tag?: string) => {
   return useQuery({
     queryKey: ['newsletterEntries', page, pageSize, tag],
     queryFn: () => newsletterApi.getEntries(page, pageSize, tag),
-    keepPreviousData: true,
+    placeholderData: (previousData) => previousData,
   });
 };
 
