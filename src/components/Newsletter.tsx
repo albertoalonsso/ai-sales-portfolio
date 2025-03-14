@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import Section from './ui/Section';
 import { Card, CardContent } from '@/components/ui/card';
-import Button from './ui/Button';
+import { Button } from '@/components/ui/button';
 import { Mail, Send, Check, Calendar, MessageSquare, Share2 } from 'lucide-react';
 import { toast } from 'sonner';
 
