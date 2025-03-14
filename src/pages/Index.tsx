@@ -43,10 +43,10 @@ const Index = () => {
     <main className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
+      <Newsletter />
       <About />
       <Experience />
       <Projects />
-      <Newsletter />
       <Contact />
       <Footer />
     </main>

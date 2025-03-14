@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import Section from './ui/Section';
-import { Card, CardContent } from './ui/Card';
+import { Card, CardContent } from '@/components/ui/card';
 import Button from './ui/Button';
-import { Mail, Send, Check } from 'lucide-react';
+import { Mail, Send, Check, Calendar, MessageSquare, Share2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Newsletter = () => {
@@ -11,6 +11,36 @@ const Newsletter = () => {
   const [frequency, setFrequency] = useState('weekly');
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Reinforcement Learning in Financial Markets: Current Applications",
+      excerpt: "Exploring how RL is transforming portfolio optimization and trading strategies in today's dynamic markets.",
+      date: "June 15, 2024",
+      category: "AI & Finance",
+      commentCount: 8,
+      shareCount: 23
+    },
+    {
+      id: 2,
+      title: "The Future of 5G and IoT in Industrial Environments",
+      excerpt: "How next-generation connectivity is enabling unprecedented automation and data analytics in manufacturing.",
+      date: "June 2, 2024",
+      category: "Technology",
+      commentCount: 5,
+      shareCount: 17
+    },
+    {
+      id: 3,
+      title: "NLP Analysis: Extracting Value from Financial Communications",
+      excerpt: "Techniques for analyzing earnings calls and financial reports to gain market insights using natural language processing.",
+      date: "May 23, 2024",
+      category: "AI & Finance",
+      commentCount: 12,
+      shareCount: 31
+    }
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,20 +62,53 @@ const Newsletter = () => {
   };
 
   return (
-    <Section id="newsletter" className="bg-navy text-white">
-      <div className="max-w-4xl mx-auto">
+    <Section id="newsletter" className="bg-gradient-to-b from-background to-navy/10">
+      <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <div className="pill bg-white/20 text-white mb-4">Newsletter</div>
+          <div className="pill-accent mb-4">Blog & Newsletter</div>
           <h2 className="heading-lg mb-4">
-            AI×Finance: <span className="text-turquoise">Strategies of the Future</span>
+            AI×Finance: <span className="text-gradient">Strategies of the Future</span>
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Subscribe to my newsletter for insights at the intersection of Artificial Intelligence, 
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Insights at the intersection of Artificial Intelligence, 
             Financial Markets, and Sales Strategies. Get the latest research and practical applications.
           </p>
         </div>
         
-        <Card className="bg-white/10 backdrop-blur border-white/10 text-white overflow-hidden">
+        {/* Featured Blog Posts */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {blogPosts.map((post) => (
+            <Card key={post.id} className="overflow-hidden hover:shadow-md transition-shadow">
+              <CardContent className="p-0">
+                <div className="p-5">
+                  <div className="pill mb-3">{post.category}</div>
+                  <h3 className="text-lg font-semibold mb-2 line-clamp-2">{post.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                  
+                  <div className="flex justify-between items-center text-xs text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      <span>{post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-1">
+                        <MessageSquare className="h-3 w-3" />
+                        <span>{post.commentCount}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Share2 className="h-3 w-3" />
+                        <span>{post.shareCount}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        
+        {/* Subscription Card */}
+        <Card className="bg-navy text-white overflow-hidden border-white/10">
           <CardContent className="p-0">
             <div className="grid grid-cols-1 md:grid-cols-5">
               {/* Left Side - Categories */}

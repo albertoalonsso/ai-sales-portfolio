@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import Button from './ui/Button';
 import { ArrowDown } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const Hero = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -38,39 +39,46 @@ const Hero = () => {
       
       {/* Content */}
       <div className="section-container relative z-10 mt-10 md:mt-0 flex flex-col items-center justify-center text-center">
-        <div className="pill-accent mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+        {/* Professional Photo */}
+        <Avatar className="w-32 h-32 border-4 border-white mb-6 shadow-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <AvatarImage src="/lovable-uploads/79bd5eb7-9170-4890-b422-c766a6135663.png" alt="Alberto Alonso" />
+          <AvatarFallback>AA</AvatarFallback>
+        </Avatar>
+        
+        <div className="pill-accent mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           Sales AI Engineer
         </div>
         
-        <h1 className="heading-xl max-w-4xl mb-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+        {/* Smaller heading */}
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 max-w-3xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
           Connecting <span className="text-gradient">Artificial Intelligence</span>, Finance & Sales Strategies
         </h1>
         
-        <p className="text-body-lg max-w-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <p className="text-body-lg max-w-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           Specialized in developing AI solutions for sales optimization and financial markets, 
           with research background in Deep Reinforcement Learning.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.7s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
           <Button 
             variant="accent" 
             size="lg" 
             withArrow
-            onClick={() => window.location.href = '#projects'}
-          >
-            Discover my projects
-          </Button>
-          <Button 
-            variant="secondary" 
-            size="lg"
             onClick={() => window.location.href = '#newsletter'}
           >
             Subscribe to newsletter
           </Button>
+          <Button 
+            variant="secondary" 
+            size="lg"
+            onClick={() => window.location.href = '#projects'}
+          >
+            Discover my projects
+          </Button>
         </div>
         
         {/* Technology Pills */}
-        <div className="flex flex-wrap justify-center gap-3 mt-12 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+        <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="pill">Artificial Intelligence</div>
           <div className="pill">Deep Learning</div>
           <div className="pill">Reinforcement Learning</div>
@@ -81,7 +89,7 @@ const Hero = () => {
         
         {/* Scroll Down Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a href="#about" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#newsletter" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors">
             <span className="text-sm mb-2">Scroll Down</span>
             <ArrowDown size={20} />
           </a>
