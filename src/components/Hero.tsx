@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import Button from './ui/Button';
 import { Calendar, MessageSquare, Share2 } from 'lucide-react';
@@ -47,16 +48,24 @@ const Hero = () => {
           Connecting <span className="text-gradient">Artificial Intelligence</span>, Finance & Sales Strategies
         </h1>
         
-        {/* Hero Media Section - Single Photo */}
-        <div className="mb-8 w-full max-w-lg mx-auto">
-          <div className="overflow-hidden rounded-2xl shadow-lg">
-            <AspectRatio ratio={1/1} className="bg-muted">
-              <img 
-                src="/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png" 
-                alt="Alberto Alonso with microphone" 
-                className="object-cover w-full h-full"
-              />
-            </AspectRatio>
+        {/* Hero Section with Image and Featured Posts side by side */}
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {/* Hero Image */}
+          <div className="md:col-span-1">
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <AspectRatio ratio={1/1} className="bg-muted">
+                <img 
+                  src="/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png" 
+                  alt="Alberto Alonso with microphone" 
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+            </div>
+          </div>
+          
+          {/* Featured Posts */}
+          <div className="md:col-span-2 flex flex-col gap-4">
+            <FeaturedPosts />
           </div>
         </div>
         
@@ -80,11 +89,6 @@ const Hero = () => {
           >
             Discover my projects
           </Button>
-        </div>
-
-        {/* Featured Blog Posts */}
-        <div className="mt-10 w-full max-w-5xl">
-          <FeaturedPosts />
         </div>
       </div>
     </section>
@@ -124,13 +128,13 @@ const FeaturedPosts = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <>
       {blogPosts.map((post) => (
         <div key={post.id} className="overflow-hidden hover:shadow-md transition-shadow bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
           <div className="p-5">
             <div className="pill mb-3">{post.category}</div>
             <h3 className="text-lg font-semibold mb-2 line-clamp-2">{post.title}</h3>
-            <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+            <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{post.excerpt}</p>
             
             <div className="flex justify-between items-center text-xs text-muted-foreground">
               <div className="flex items-center gap-1">
@@ -151,7 +155,7 @@ const FeaturedPosts = () => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

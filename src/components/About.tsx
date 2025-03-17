@@ -36,10 +36,10 @@ const About = () => {
   ];
 
   return (
-    <Section id="about">
+    <Section id="about" className="main-section bg-gradient-to-b from-background to-navy/5">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <div className="pill mb-4">About Me</div>
+          <div className="pill-accent mb-4">About Me</div>
           <h2 className="heading-lg mb-6">
             Bridging Technology, <br />
             <span className="text-gradient">Finance and Sales</span>
@@ -107,7 +107,7 @@ const About = () => {
         </div>
         
         <div>
-          <div className="pill mb-4">Education</div>
+          <div className="pill-accent mb-4">Education</div>
           <h2 className="heading-md mb-6">Academic Background</h2>
           
           <div className="relative pl-8 border-l border-border">
@@ -117,8 +117,8 @@ const About = () => {
                 className="mb-10 relative"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="absolute -left-[33px] w-12 h-12 rounded-full flex items-center justify-center bg-secondary">
-                  <GraduationCap className="h-5 w-5 text-navy" />
+                <div className="absolute -left-[28px] w-10 h-10 rounded-full flex items-center justify-center bg-secondary">
+                  <GraduationCap className="h-4 w-4 text-navy" />
                 </div>
                 <div className="pill mb-2">{item.period}</div>
                 <h3 className="text-lg font-semibold">{item.degree}</h3>
@@ -129,7 +129,7 @@ const About = () => {
           
           {/* Technologies section */}
           <div className="mt-10">
-            <div className="pill mb-4">Technologies</div>
+            <div className="pill-accent mb-4">Technologies</div>
             <h2 className="heading-md mb-6">Tools & Platforms</h2>
             
             <div className="grid grid-cols-5 gap-4">

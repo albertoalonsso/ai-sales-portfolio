@@ -33,10 +33,10 @@ const Experience = () => {
   ];
 
   return (
-    <Section id="experience">
+    <Section id="experience" className="main-section bg-gradient-to-b from-background to-navy/5">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <div className="pill mb-4">Experience</div>
+          <div className="pill-accent mb-4">Experience</div>
           <h2 className="heading-lg">
             My Professional <span className="text-gradient">Journey</span>
           </h2>
