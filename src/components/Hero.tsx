@@ -77,7 +77,7 @@ const Hero = () => {
           </Button>
         </div>
         
-        {/* Technology Pills añado */}
+        {/* Technology Pills*/}
         <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="pill">Artificial Intelligence</div>
           <div className="pill">Deep Learning</div>
