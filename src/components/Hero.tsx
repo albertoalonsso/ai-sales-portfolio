@@ -76,16 +76,6 @@ const Hero = () => {
             Discover my projects
           </Button>
         </div>
-        
-        {/* Technology Pills g*/}
-        <div className="flex flex-wrap justify-center gap-3 mt-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <div className="pill">Artificial Intelligence</div>
-          <div className="pill">Deep Learning</div>
-          <div className="pill">Reinforcement Learning</div>
-          <div className="pill">Financial Markets</div>
-          <div className="pill">NLP</div>
-          <div className="pill">5G/IoT</div>
-        </div>
       </div>
     </section>
   );
