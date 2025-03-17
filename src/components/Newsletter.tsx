@@ -153,12 +153,6 @@ const Newsletter = () => {
                     </div>
                     <span className="text-white/80 text-sm">Consultative Sales in AI Solutions</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <div className="h-6 w-6 rounded-full bg-turquoise/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="h-3 w-3 text-turquoise" />
-                    </div>
-                    <span className="text-white/80 text-sm">IoT and 5G in Industry Applications</span>
-                  </li>
                 </ul>
               </div>
               
