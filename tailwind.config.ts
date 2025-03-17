@@ -77,7 +77,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ["SF Pro Display", "Inter", "Helvetica", "Arial", "sans-serif"],
+				sans: ["Montserrat", "SF Pro Display", "Inter", "Helvetica", "Arial", "sans-serif"],
 				mono: ["SF Mono", "JetBrains Mono", "monospace"],
 			},
 			fontSize: {

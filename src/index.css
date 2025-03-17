@@ -139,7 +139,7 @@
   
   /* Section styling with consistent borders */
   .main-section {
-    @apply border-t-4 border-navy relative py-6;
+    @apply border-t border-navy relative py-4;
   }
   
   .main-section::before {
@@ -149,6 +149,11 @@
   
   .subsection-title {
     @apply text-xl font-medium text-navy border-b border-navy/30 pb-2 mb-4;
+  }
+  
+  /* Section divider */
+  .section-divider {
+    @apply w-full h-px bg-navy/50 my-1;
   }
 }
 
@@ -180,5 +185,18 @@
   
   .perspective {
     perspective: 1000px;
+  }
+  
+  /* Gold border utility */
+  .border-gold {
+    border-color: #D4AF37;
+  }
+  
+  .text-gold {
+    color: #D4AF37;
+  }
+  
+  .bg-gold {
+    background-color: #D4AF37;
   }
 }

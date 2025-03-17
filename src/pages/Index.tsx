@@ -43,10 +43,15 @@ const Index = () => {
     <main className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
+      <div className="section-divider"></div>
       <NewsletterSection />
+      <div className="section-divider"></div>
       <About />
+      <div className="section-divider"></div>
       <Experience />
+      <div className="section-divider"></div>
       <Projects />
+      <div className="section-divider"></div>
       <Contact />
       <Footer />
     </main>
