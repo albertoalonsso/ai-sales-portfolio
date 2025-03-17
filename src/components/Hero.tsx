@@ -86,14 +86,6 @@ const Hero = () => {
           <div className="pill">NLP</div>
           <div className="pill">5G/IoT</div>
         </div>
-        
-        {/* Scroll Down Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a href="#newsletter" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors">
-            <span className="text-sm mb-2">Scroll Down</span>
-            <ArrowDown size={20} />
-          </a>
-        </div>
       </div>
     </section>
   );
