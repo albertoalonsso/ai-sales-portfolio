@@ -1,8 +1,7 @@
-
 import React, { useEffect, useRef } from 'react';
 import Button from './ui/Button';
-import { ArrowDown } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
+import { Calendar, MessageSquare, Share2 } from 'lucide-react';
 
 const Hero = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -25,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div 
@@ -39,9 +38,9 @@ const Hero = () => {
       
       {/* Content */}
       <div className="section-container relative z-10 mt-10 md:mt-0 flex flex-col items-center justify-center text-center">
-        {/* Professional Photo */}
-        <Avatar className="w-32 h-32 border-4 border-white mb-6 shadow-xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <AvatarImage src="/lovable-uploads/79bd5eb7-9170-4890-b422-c766a6135663.png" alt="Alberto Alonso" />
+        {/* Professional Photo - Fixed aspect ratio for photo */}
+        <Avatar className="w-32 h-32 border-4 border-white mb-6 shadow-xl animate-fade-in rounded-full overflow-hidden" style={{ animationDelay: '0.1s' }}>
+          <AvatarImage src="/lovable-uploads/79bd5eb7-9170-4890-b422-c766a6135663.png" alt="Alberto Alonso" className="object-cover" />
           <AvatarFallback>AA</AvatarFallback>
         </Avatar>
         
@@ -63,7 +62,6 @@ const Hero = () => {
           <Button 
             variant="accent" 
             size="lg" 
-            withArrow
             onClick={() => window.location.href = '#newsletter'}
           >
             Subscribe to newsletter
@@ -76,8 +74,77 @@ const Hero = () => {
             Discover my projects
           </Button>
         </div>
+
+        {/* Featured Blog Posts moved here */}
+        <div className="mt-16 w-full max-w-5xl">
+          <FeaturedPosts />
+        </div>
       </div>
     </section>
+  );
+};
+
+// Component for featured posts to keep Hero component cleaner
+const FeaturedPosts = () => {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Reinforcement Learning in Financial Markets: Current Applications",
+      excerpt: "Exploring how RL is transforming portfolio optimization and trading strategies in today's dynamic markets.",
+      date: "June 15, 2024",
+      category: "AI & Finance",
+      commentCount: 8,
+      shareCount: 23
+    },
+    {
+      id: 2,
+      title: "The Future of 5G and IoT in Industrial Environments",
+      excerpt: "How next-generation connectivity is enabling unprecedented automation and data analytics in manufacturing.",
+      date: "June 2, 2024",
+      category: "Technology",
+      commentCount: 5,
+      shareCount: 17
+    },
+    {
+      id: 3,
+      title: "NLP Analysis: Extracting Value from Financial Communications",
+      excerpt: "Techniques for analyzing earnings calls and financial reports to gain market insights using natural language processing.",
+      date: "May 23, 2024",
+      category: "AI & Finance",
+      commentCount: 12,
+      shareCount: 31
+    }
+  ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {blogPosts.map((post) => (
+        <div key={post.id} className="overflow-hidden hover:shadow-md transition-shadow bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+          <div className="p-5">
+            <div className="pill mb-3">{post.category}</div>
+            <h3 className="text-lg font-semibold mb-2 line-clamp-2">{post.title}</h3>
+            <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+            
+            <div className="flex justify-between items-center text-xs text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <Calendar className="h-3 w-3" />
+                <span>{post.date}</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1">
+                  <MessageSquare className="h-3 w-3" />
+                  <span>{post.commentCount}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Share2 className="h-3 w-3" />
+                  <span>{post.shareCount}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

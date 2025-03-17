@@ -45,7 +45,7 @@ const Section = ({ id, children, className, fullWidth = false, ...props }: Secti
       id={id} 
       ref={sectionRef}
       className={cn(
-        'py-16 md:py-24 w-full',
+        'py-10 md:py-16 w-full', // Reduced spacing from py-16 md:py-24
         isVisible ? 'animate-fade-in-up' : 'opacity-0',
         className
       )}

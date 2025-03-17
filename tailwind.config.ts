@@ -68,7 +68,8 @@ export default {
 				gold: "#D4AF37",
 				navy: "#1A2C56",
 				lightGray: "#F5F5F7",
-				turquoise: "#00CED1"
+				turquoise: "#00CED1",
+				'vivid-purple': "#D946EF",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -125,6 +126,9 @@ export default {
 				'image-glow': {
 					'0%': { 'box-shadow': '0 0 0 0 rgba(255, 255, 255, 0)' },
 					'100%': { 'box-shadow': '0 0 30px 10px rgba(255, 255, 255, 0.2)' }
+				},
+				'shimmer': {
+					'100%': { transform: 'translateX(100%)' }
 				}
 			},
 			animation: {

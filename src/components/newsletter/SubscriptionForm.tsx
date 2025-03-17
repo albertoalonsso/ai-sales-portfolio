@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Mail, Send, Check } from 'lucide-react';
+import { Mail, Check } from 'lucide-react';
 import { toast } from 'sonner';
 import { useAddSubscriber } from '@/hooks/useNewsletter';
 
@@ -112,10 +112,7 @@ const SubscriptionForm = () => {
                 Subscribed!
               </span>
             ) : (
-              <span className="flex items-center gap-2">
-                <Send className="h-4 w-4" />
-                Subscribe to Newsletter
-              </span>
+              <span>Subscribe to Newsletter</span>
             )}
           </Button>
         </div>

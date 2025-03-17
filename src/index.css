@@ -65,7 +65,7 @@
   }
   
   .section-container {
-    @apply max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32;
+    @apply max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20;
   }
   
   .fade-in-section {
@@ -149,6 +149,14 @@
   
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-navy via-navy to-turquoise;
+  }
+
+  .vivid-purple {
+    color: #D946EF;
+  }
+  
+  .border-vivid-purple {
+    border-color: #D946EF;
   }
   
   .mask-radial-gradient {
