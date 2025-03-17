@@ -57,3 +57,13 @@ export const useAddSubscriber = () => {
     },
   });
 };
+
+// Add the useSubscription hook that was missing
+export const useSubscription = () => {
+  const mutation = useAddSubscriber();
+  
+  return {
+    subscribe: (email: string) => mutation.mutateAsync({ email }),
+    isLoading: mutation.isPending
+  };
+};

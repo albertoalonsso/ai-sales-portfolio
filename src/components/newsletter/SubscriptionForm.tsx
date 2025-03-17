@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -54,7 +55,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ className }) => {
         {isLoading ? "Subscribing..." : "Subscribe"}
       </Button>
       {errors.email && (
-        <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
+        <p className="text-red-500 text-xs mt-1">{errors.email.message as React.ReactNode}</p>
       )}
     </form>
   );
