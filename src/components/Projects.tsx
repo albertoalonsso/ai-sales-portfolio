@@ -1,9 +1,8 @@
-
-import React, { useState } from 'react';
-import Section from './ui/Section';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from './ui/Card';
-import { BookOpen, ArrowRight, Brain, LineChart, Network } from 'lucide-react';
+import React from 'react';
+import Section from '@/components/ui/Section';
+import { ArrowRight } from 'lucide-react';
 import Button from './ui/Button';
+import { Card } from '@/components/ui/card';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('ai');

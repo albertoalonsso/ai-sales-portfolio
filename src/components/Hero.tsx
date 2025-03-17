@@ -1,7 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
 import Button from './ui/Button';
-import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 import { Calendar, MessageSquare, Share2 } from 'lucide-react';
 import { AspectRatio } from './ui/aspect-ratio';
 
@@ -26,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-6">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-0">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div 
@@ -40,17 +38,17 @@ const Hero = () => {
       
       {/* Content */}
       <div className="section-container relative z-10 flex flex-col items-center justify-center text-center">
-        {/* Hero Media Section - Multiple Photos */}
-        <div className="grid grid-cols-2 gap-6 mb-8 w-full max-w-2xl mx-auto">
-          <div className="overflow-hidden rounded-2xl shadow-lg">
-            <AspectRatio ratio={1/1} className="bg-muted">
-              <img 
-                src="/lovable-uploads/51b8e032-4dd3-4ab5-983b-c77fcd3cce6a.png" 
-                alt="Alberto Alonso" 
-                className="object-cover w-full h-full"
-              />
-            </AspectRatio>
-          </div>
+        <div className="pill-accent mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          Sales AI Engineer
+        </div>
+        
+        {/* Heading */}
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-8 max-w-3xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          Connecting <span className="text-gradient">Artificial Intelligence</span>, Finance & Sales Strategies
+        </h1>
+        
+        {/* Hero Media Section - Single Photo */}
+        <div className="mb-8 w-full max-w-lg mx-auto">
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <AspectRatio ratio={1/1} className="bg-muted">
               <img 
@@ -61,15 +59,6 @@ const Hero = () => {
             </AspectRatio>
           </div>
         </div>
-        
-        <div className="pill-accent mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Sales AI Engineer
-        </div>
-        
-        {/* Heading */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 max-w-3xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          Connecting <span className="text-gradient">Artificial Intelligence</span>, Finance & Sales Strategies
-        </h1>
         
         <p className="text-body-lg max-w-2xl text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           Specialized in developing AI solutions for sales optimization and financial markets, 

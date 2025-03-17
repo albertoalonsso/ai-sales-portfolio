@@ -5,9 +5,9 @@ import SubscriptionCard from './SubscriptionCard';
 
 const NewsletterSection = () => {
   return (
-    <Section id="newsletter" className="bg-gradient-to-b from-background to-navy/10 py-8 md:py-12">
+    <Section id="newsletter" className="bg-gradient-to-b from-background to-navy/10 py-4 md:py-6 border-t-4 border-navy">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <div className="pill-accent mb-4">Blog & Newsletter</div>
           <h2 className="heading-lg mb-4">
             AI×Finance: <span className="text-gradient">Strategies of the Future</span>

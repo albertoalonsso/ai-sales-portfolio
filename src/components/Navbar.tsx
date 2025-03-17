@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Button from './ui/Button';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,19 +43,12 @@ const Navbar = () => {
             <ul className="flex items-center gap-6">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="nav-link">
+                  <a href={link.href} className="nav-link font-medium">
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <Button 
-              variant="accent" 
-              size="sm"
-              onClick={() => window.location.href = '#contact'}
-            >
-              Let's Talk
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,18 +80,6 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li className="pt-4">
-            <Button 
-              variant="accent" 
-              className="w-full"
-              onClick={() => {
-                window.location.href = '#contact';
-                toggleMenu();
-              }}
-            >
-              Let's Talk
-            </Button>
-          </li>
         </ul>
       </div>
     </header>
