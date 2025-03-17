@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
-import Newsletter from '@/components/Newsletter';
+import NewsletterSection from '@/components/newsletter/NewsletterSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -43,7 +43,7 @@ const Index = () => {
     <main className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
-      <Newsletter />
+      <NewsletterSection />
       <About />
       <Experience />
       <Projects />

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Section from './ui/Section';
-import { Book, GraduationCap, Lightbulb, Users } from 'lucide-react';
+import { Book, GraduationCap, Lightbulb, Users, Github, Cloud, Code, Database, Cpu } from 'lucide-react';
 
 const About = () => {
   const education = [
@@ -25,6 +25,14 @@ const About = () => {
       institution: "Universitat Politècnica de València (UPV)",
       period: "2014 - 2018"
     }
+  ];
+
+  const technologies = [
+    { name: "GitHub", icon: <Github className="h-8 w-8" /> },
+    { name: "AWS", icon: <Cloud className="h-8 w-8" /> },
+    { name: "Python", icon: <Code className="h-8 w-8" /> },
+    { name: "Docker", icon: <Database className="h-8 w-8" /> },
+    { name: "NVIDIA", icon: <Cpu className="h-8 w-8" /> },
   ];
 
   return (
@@ -109,14 +117,31 @@ const About = () => {
                 className="mb-10 relative"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="absolute -left-[33px] w-14 h-14 rounded-full flex items-center justify-center bg-secondary">
-                  <GraduationCap className="h-6 w-6 text-navy" />
+                <div className="absolute -left-[33px] w-12 h-12 rounded-full flex items-center justify-center bg-secondary">
+                  <GraduationCap className="h-5 w-5 text-navy" />
                 </div>
                 <div className="pill mb-2">{item.period}</div>
                 <h3 className="text-lg font-semibold">{item.degree}</h3>
                 <p className="text-muted-foreground">{item.institution}</p>
               </div>
             ))}
+          </div>
+          
+          {/* Technologies section */}
+          <div className="mt-10">
+            <div className="pill mb-4">Technologies</div>
+            <h2 className="heading-md mb-6">Tools & Platforms</h2>
+            
+            <div className="grid grid-cols-5 gap-4">
+              {technologies.map((tech, index) => (
+                <div key={index} className="flex flex-col items-center gap-2">
+                  <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center">
+                    {tech.icon}
+                  </div>
+                  <span className="text-sm font-medium">{tech.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

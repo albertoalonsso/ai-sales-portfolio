@@ -1,7 +1,9 @@
+
 import React, { useEffect, useRef } from 'react';
 import Button from './ui/Button';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 import { Calendar, MessageSquare, Share2 } from 'lucide-react';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const Hero = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -24,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-6">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div 
@@ -37,18 +39,34 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="section-container relative z-10 mt-10 md:mt-0 flex flex-col items-center justify-center text-center">
-        {/* Professional Photo - Fixed aspect ratio for photo */}
-        <Avatar className="w-32 h-32 border-4 border-white mb-6 shadow-xl animate-fade-in rounded-full overflow-hidden" style={{ animationDelay: '0.1s' }}>
-          <AvatarImage src="/lovable-uploads/79bd5eb7-9170-4890-b422-c766a6135663.png" alt="Alberto Alonso" className="object-cover" />
-          <AvatarFallback>AA</AvatarFallback>
-        </Avatar>
+      <div className="section-container relative z-10 flex flex-col items-center justify-center text-center">
+        {/* Hero Media Section - Multiple Photos */}
+        <div className="grid grid-cols-2 gap-6 mb-8 w-full max-w-2xl mx-auto">
+          <div className="overflow-hidden rounded-2xl shadow-lg">
+            <AspectRatio ratio={1/1} className="bg-muted">
+              <img 
+                src="/lovable-uploads/51b8e032-4dd3-4ab5-983b-c77fcd3cce6a.png" 
+                alt="Alberto Alonso" 
+                className="object-cover w-full h-full"
+              />
+            </AspectRatio>
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-lg">
+            <AspectRatio ratio={1/1} className="bg-muted">
+              <img 
+                src="/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png" 
+                alt="Alberto Alonso with microphone" 
+                className="object-cover w-full h-full"
+              />
+            </AspectRatio>
+          </div>
+        </div>
         
         <div className="pill-accent mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           Sales AI Engineer
         </div>
         
-        {/* Smaller heading */}
+        {/* Heading */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 max-w-3xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
           Connecting <span className="text-gradient">Artificial Intelligence</span>, Finance & Sales Strategies
         </h1>
@@ -75,8 +93,8 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Featured Blog Posts moved here */}
-        <div className="mt-16 w-full max-w-5xl">
+        {/* Featured Blog Posts */}
+        <div className="mt-10 w-full max-w-5xl">
           <FeaturedPosts />
         </div>
       </div>
