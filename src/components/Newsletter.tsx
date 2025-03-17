@@ -47,7 +47,7 @@ const Newsletter = () => {
   setSubmitting(true);
 
   try {
-    const res = await fetch('https://webhook.site/dc55f806-6bb6-4295-ac11-283ca109022e', {  // tu URL única
+    const res = await fetch('https://corsproxy.io/?https://webhook.site/dc55f806-6bb6-4295-ac11-283ca109022e', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
