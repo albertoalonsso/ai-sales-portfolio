@@ -47,7 +47,7 @@ const Newsletter = () => {
   setSubmitting(true);
 
   try {
-    const res = await fetch('https://corsproxy.io/?https://webhook.site/dc55f806-6bb6-4295-ac11-283ca109022e', {
+    const res = await fetch('https://eolya7zl6i8a8nk.m.pipedream.net', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -59,7 +59,7 @@ const Newsletter = () => {
     if (res.ok) {
       setSuccess(true);
       setEmail('');
-      toast.success('Sent to Webhook.site!', {
+      toast.success('Sent to RequestBin!', {
         description: 'Check your request log.',
       });
       setTimeout(() => setSuccess(false), 5000);
