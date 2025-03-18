@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import Section from './ui/Section';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/Card';
 import Button from './ui/Button';
 import { Send, Mail, Linkedin, Github, Calendar, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <Section id="contact">
       <div className="text-center mb-12">
-        <div className="pill mb-4">Contact</div>
+        <div className="pill-accent mb-4">Contact</div>
         <h2 className="heading-lg mb-4">
           Let's <span className="text-gradient">Connect</span>
         </h2>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Section from '@/components/ui/Section';
 import { ArrowRight } from 'lucide-react';
 import Button from './ui/Button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
 import { Brain, Network, BookOpen } from 'lucide-react';
 
 const Projects = () => {
@@ -54,7 +54,7 @@ const Projects = () => {
 
   return (
     <Section id="projects">
-      <div className="pill mb-4">Research Projects</div>
+      <div className="pill-accent mb-4">Research Projects</div>
       <h2 className="heading-lg mb-8">
         Featured <span className="text-gradient">Research</span>
       </h2>

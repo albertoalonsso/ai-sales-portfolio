@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Section from './ui/Section';
-import { Book, GraduationCap, Lightbulb, Users, Github, Cloud, Code, Database, Cpu } from 'lucide-react';
+import { Book, GraduationCap, Lightbulb, Users, Github, Cloud, Code, Database, Cpu, Server, Activity, Box, Globe } from 'lucide-react';
 
 const About = () => {
   const education = [
@@ -31,8 +31,12 @@ const About = () => {
     { name: "GitHub", icon: <Github className="h-8 w-8" /> },
     { name: "AWS", icon: <Cloud className="h-8 w-8" /> },
     { name: "Python", icon: <Code className="h-8 w-8" /> },
-    { name: "Docker", icon: <Database className="h-8 w-8" /> },
+    { name: "MongoDB", icon: <Database className="h-8 w-8" /> },
     { name: "NVIDIA", icon: <Cpu className="h-8 w-8" /> },
+    { name: "Flask", icon: <Server className="h-8 w-8" /> },
+    { name: "N8N", icon: <Activity className="h-8 w-8" /> },
+    { name: "LangChain", icon: <Box className="h-8 w-8" /> },
+    { name: "Azure", icon: <Globe className="h-8 w-8" /> },
   ];
 
   return (
@@ -127,12 +131,12 @@ const About = () => {
             ))}
           </div>
           
-          {/* Technologies section */}
+          {/* Technologies section with updated techs */}
           <div className="mt-10">
             <div className="pill-accent mb-4">Technologies</div>
             <h2 className="heading-md mb-6">Tools & Platforms</h2>
             
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex flex-col items-center gap-2">
                   <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center">

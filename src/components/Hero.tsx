@@ -113,8 +113,8 @@ const Hero = () => {
         
         {/* Hero Section with Image and Featured Posts side by side */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
-          {/* Profile Image - Takes 4/12 columns in desktop */}
-          <div className="lg:col-span-4 flex justify-center mb-6 lg:mb-0">
+          {/* Profile Image - Takes 4/12 columns in desktop and vertically centered */}
+          <div className="lg:col-span-4 flex items-center justify-center mb-6 lg:mb-0">
             <div className="w-full max-w-xs overflow-hidden rounded-lg border border-gold/30 transition-all duration-300 hover:scale-[1.02] hover:border-gold/70">
               <AspectRatio ratio={3/4} className="bg-muted">
                 <img 
