@@ -8,22 +8,22 @@ const About = () => {
     {
       degree: "Master in Artificial Intelligence",
       institution: "Universidad Internacional de La Rioja (UNIR)",
-      period: "2022 - 2023"
+      period: "2024 - 2025"
     },
     {
       degree: "Master in Electronic Systems",
       institution: "Universitat Politècnica de València (UPV)",
-      period: "2020 - 2021"
+      period: "2023 - 2024"
     },
     {
       degree: "Master in Telecommunications Engineering",
       institution: "Universitat Politècnica de València (UPV)",
-      period: "2018 - 2020"
+      period: "2022 - 2024"
     },
     {
       degree: "Bachelor in Telecommunications Engineering",
       institution: "Universitat Politècnica de València (UPV)",
-      period: "2014 - 2018"
+      period: "2018 - 2022"
     }
   ];
 

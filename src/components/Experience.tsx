@@ -7,27 +7,27 @@ import { Card, CardContent } from '@/components/ui/card';
 const Experience = () => {
   const jobs = [
     {
-      title: "AI Sales Engineer",
-      company: "Deep Tech Solutions",
-      period: "2023 - Present",
-      location: "Valencia, Spain",
-      description: "Driving sales growth by integrating AI solutions into existing sales processes. Developing custom AI tools to enhance sales strategies and customer engagement.",
+      title: "Co-Founder",
+      company: "Mindcast",
+      period: "2024 - Present",
+      location: "Spain",
+      description: "Driving professional careers paths creating a prestigious community based on a podcast production.",
       tags: ["AI Solutions", "Sales Strategy", "Customer Engagement"]
     },
     {
-      title: "International Sales Manager",
-      company: "Global IoT Connect",
-      period: "2021 - 2022",
-      location: "Remote",
-      description: "Expanded market reach in IoT and 5G technologies across Europe and Latin America. Managed key accounts and developed new sales channels.",
+      title: "International Sales Engineer",
+      company: "Fivecomm",
+      period: "2022 - Present",
+      location: "Valencia, Spain",
+      description: "Expanded market reach in IoT and 5G technologies across Europe, Asia andLatin America. Managed key accounts and developed new sales channels.",
       tags: ["IoT", "5G", "International Sales", "Account Management"]
     },
     {
-      title: "Research Engineer",
-      company: "UPV Research Group",
-      period: "2019 - 2021",
+      title: "Research (AI) Engineer",
+      company: "Fivecomm",
+      period: "2022 - Present",
       location: "Valencia, Spain",
-      description: "Conducted research on Deep Reinforcement Learning applied to telecommunications network optimization. Published papers in top-tier academic journals.",
+      description: "Conducted research on Deep Reinforcement Learning applied to telecommunications network optimization.",
       tags: ["Deep Learning", "Reinforcement Learning", "Telecommunications", "Research"]
     }
   ];
