@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,38 +102,16 @@
     @apply text-xl sm:text-2xl font-semibold tracking-tight;
   }
   
-  .btn {
-    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
-    focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none 
-    disabled:opacity-50;
+  .blog-card {
+    @apply rounded-lg overflow-hidden transition-all duration-300 ease-out;
   }
   
-  .btn-primary {
-    @apply btn bg-primary text-primary-foreground hover:bg-primary/90;
+  .blog-card-alt {
+    @apply bg-[#3F4561] text-white;
   }
   
-  .btn-accent {
-    @apply btn bg-navy text-white hover:bg-navy/90;
-  }
-  
-  .btn-secondary {
-    @apply btn bg-secondary text-secondary-foreground hover:bg-secondary/80;
-  }
-  
-  .btn-ghost {
-    @apply btn hover:bg-accent/10 hover:text-accent;
-  }
-  
-  .nav-link {
-    @apply relative text-sm font-medium text-foreground/80 transition-colors hover:text-foreground;
-  }
-  
-  .nav-link::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-[1px] bg-foreground transition-all duration-300 ease-in-out;
-  }
-  
-  .nav-link:hover::after {
-    @apply w-full;
+  .blog-card-white {
+    @apply bg-white text-foreground;
   }
   
   /* Section styling with consistent borders */
