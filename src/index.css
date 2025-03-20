@@ -116,12 +116,7 @@
   
   /* Section styling with consistent borders */
   .main-section {
-    @apply border-t border-navy relative py-4;
-  }
-  
-  .main-section::before {
-    content: "";
-    @apply absolute left-0 top-0 w-full h-1 bg-navy;
+    @apply border-t border-navy relative py-4 border-t-[1px];
   }
   
   .subsection-title {
