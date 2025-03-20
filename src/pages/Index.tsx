@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -50,7 +49,7 @@ const Index = () => {
       <About />
       <Separator className="section-divider" />
       <Experience />
-      <Separator className="section-divider" />
+      <Separator className="section-divider"/>
       <Projects />
       <Separator className="section-divider" />
       <Contact />
