@@ -8,6 +8,7 @@ import Projects from '@/components/Projects';
 import NewsletterSection from '@/components/newsletter/NewsletterSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   useEffect(() => {
@@ -43,15 +44,15 @@ const Index = () => {
     <main className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
-      <div className="section-divider"></div>
+      <Separator className="section-divider" />
       <NewsletterSection />
-      <div className="section-divider"></div>
+      <Separator className="section-divider" />
       <About />
-      <div className="section-divider"></div>
+      <Separator className="section-divider" />
       <Experience />
-      <div className="section-divider"></div>
+      <Separator className="section-divider" />
       <Projects />
-      <div className="section-divider"></div>
+      <Separator className="section-divider" />
       <Contact />
       <Footer />
     </main>

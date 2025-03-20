@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { AspectRatio } from './ui/aspect-ratio';
 import { Link } from 'react-router-dom';
@@ -151,8 +152,9 @@ const Hero = () => {
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
           <Button 
-            variant="accent" 
+            variant="default" 
             size="lg" 
+            className="bg-accent text-accent-foreground hover:bg-accent/90"
             onClick={() => window.location.href = '#newsletter'}
           >
             Subscribe to Newsletter

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Section from './ui/Section';
 import { Card, CardContent } from '@/components/ui/card';
@@ -124,9 +123,9 @@ const Contact = () => {
                 
                 <Button
                   type="submit"
-                  variant="accent"
+                  variant="default"
+                  className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                   disabled={submitting}
-                  className={`w-full ${submitting ? 'opacity-80 pointer-events-none' : ''}`}
                 >
                   {submitting ? (
                     <span className="flex items-center gap-2">
