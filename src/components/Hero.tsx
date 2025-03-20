@@ -1,9 +1,8 @@
-
 import React, { useEffect, useRef } from 'react';
 import { AspectRatio } from './ui/aspect-ratio';
 import { Link } from 'react-router-dom';
 import BlogPostCard from './newsletter/BlogPostCard';
-import Button from './ui/Button';
+import { Button } from '@/components/ui/button';
 
 // Enhanced blog posts with more data
 const featuredPosts = [
