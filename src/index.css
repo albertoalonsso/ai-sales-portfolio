@@ -127,6 +127,11 @@
   .section-divider {
     @apply w-full h-[2px] bg-navy/70 my-2;
   }
+  
+  /* Highlighted section divider for better visibility */
+  .section-divider-highlighted {
+    @apply h-[3px] bg-navy my-3 border-b border-gray-200 shadow-sm;
+  }
 }
 
 @layer utilities {
