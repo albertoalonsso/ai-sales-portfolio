@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -131,7 +130,7 @@
   
   /* Section divider with more prominent navy blue styling */
   .section-divider {
-    @apply w-full h-1 bg-navy my-1;
+    @apply w-full h-px bg-navy my-1;
   }
 }
 
