@@ -64,6 +64,27 @@ const mockNewsletterEntries: NewsletterEntry[] = [
     status: "published",
     commentCount: 12,
     shareCount: 31
+  },
+  {
+    id: '4',
+    title: "AI-Powered Sales Forecasting: Beyond Traditional Methods",
+    slug: "ai-powered-sales-forecasting",
+    content: "# AI-Powered Sales Forecasting: Beyond Traditional Methods\n\nTraditional sales forecasting methods often fall short in volatile markets. Modern AI approaches can ingest data from CRM systems, market trends, social media sentiment, and even weather patterns to create more robust predictions with quantifiable confidence intervals...",
+    excerpt: "How machine learning models are delivering more accurate sales predictions by incorporating diverse data sources.",
+    coverImage: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
+    publishedDate: "2024-05-10",
+    lastModified: "2024-05-15",
+    author: {
+      name: "Alberto Alonso",
+      avatar: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
+      title: "AI Sales Engineer"
+    },
+    tags: ["Sales & AI", "Machine Learning", "Forecasting"],
+    readTime: 10,
+    featured: false,
+    status: "published",
+    commentCount: 7,
+    shareCount: 19
   }
 ];
 

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNewsletterEntries } from '@/hooks/useNewsletter';
 import { NewsletterEntry } from '@/models/newsletter';
@@ -7,11 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Calendar, MessageSquare, Search, Share2, Tag } from 'lucide-react';
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
+import { Link } from 'react-router-dom';
 
 const NewsletterCard = ({ entry }: { entry: NewsletterEntry }) => {
   return (
-    <Card className="overflow-hidden hover:shadow-md transition-shadow">
-      <CardContent className="p-0">
+    <Card className="overflow-hidden hover:shadow-md transition-shadow h-full">
+      <CardContent className="p-0 h-full">
         {entry.coverImage && (
           <div className="aspect-video w-full overflow-hidden">
             <img 
@@ -21,7 +21,7 @@ const NewsletterCard = ({ entry }: { entry: NewsletterEntry }) => {
             />
           </div>
         )}
-        <div className="p-5">
+        <div className="p-5 flex flex-col flex-grow">
           <div className="flex gap-2 mb-3">
             {entry.tags.slice(0, 2).map((tag, index) => (
               <div key={index} className="pill-accent text-xs">{tag}</div>
@@ -30,7 +30,7 @@ const NewsletterCard = ({ entry }: { entry: NewsletterEntry }) => {
           <h3 className="text-lg font-semibold mb-2 line-clamp-2">{entry.title}</h3>
           <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{entry.excerpt}</p>
           
-          <div className="flex justify-between items-center text-xs text-muted-foreground">
+          <div className="flex justify-between items-center text-xs text-muted-foreground mt-auto">
             <div className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
               <span>{new Date(entry.publishedDate).toLocaleDateString('en-US', { 
@@ -59,7 +59,7 @@ const NewsletterCard = ({ entry }: { entry: NewsletterEntry }) => {
 const NewsletterList = () => {
   const [page, setPage] = useState(1);
   const [tag, setTag] = useState('');
-  const { data, isLoading, error } = useNewsletterEntries(page, 6, tag);
+  const { data, isLoading, error } = useNewsletterEntries(page, 12, tag);
   
   const handleTagFilter = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -127,7 +127,13 @@ const NewsletterList = () => {
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {data.entries.map((entry) => (
-              <NewsletterCard key={entry.id} entry={entry} />
+              <Link 
+                to={`/blog/${entry.id}`} 
+                key={entry.id} 
+                className="transition-transform duration-300 hover:-translate-y-1 block h-full"
+              >
+                <NewsletterCard entry={entry} />
+              </Link>
             ))}
           </div>
           
