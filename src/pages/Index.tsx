@@ -49,9 +49,9 @@ const Index = () => {
       <About />
       <Separator className="section-divider" />
       <Experience />
-      <Separator className="section-divider section-divider-highlighted" />
+      <Separator className="section-divider" />
       <Projects />
-      <Separator className="section-divider section-divider-highlighted" />
+      <Separator className="section-divider" />
       <Contact />
       <Footer />
     </main>
