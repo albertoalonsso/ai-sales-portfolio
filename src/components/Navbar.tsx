@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import StockTicker from './StockTicker';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,7 +30,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 bg-white/80 backdrop-blur-lg shadow-sm' : 'py-5 bg-transparent'
+        isScrolled ? 'py-2 bg-white/90 backdrop-blur-lg shadow-sm' : 'py-5 bg-transparent'
       }`}
     >
       <div className="section-container h-full py-0">
@@ -61,6 +62,9 @@ const Navbar = () => {
           </button>
         </nav>
       </div>
+
+      {/* Stock Ticker - Only visible when scrolled */}
+      {isScrolled && <StockTicker />}
 
       {/* Mobile Navigation */}
       <div

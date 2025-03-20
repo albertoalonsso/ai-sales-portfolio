@@ -132,6 +132,33 @@
   .section-divider-highlighted {
     @apply h-[3px] bg-navy my-3 border-b border-gray-200 shadow-sm;
   }
+  
+  /* Stock ticker animation */
+  .ticker-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .ticker-wrapper {
+    display: inline-block;
+    animation: ticker 45s linear infinite;
+    padding-left: 100%;
+  }
+  
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Hover to pause animation */
+  .ticker-container:hover .ticker-wrapper {
+    animation-play-state: paused;
+  }
 }
 
 @layer utilities {

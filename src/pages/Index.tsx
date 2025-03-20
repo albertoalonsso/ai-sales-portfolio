@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -7,6 +8,7 @@ import Projects from '@/components/Projects';
 import NewsletterSection from '@/components/newsletter/NewsletterSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import MarketWidget from '@/components/MarketWidget';
 import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
@@ -53,6 +55,8 @@ const Index = () => {
       <Projects />
       <Separator className="section-divider" />
       <Contact />
+      <Separator className="section-divider" />
+      <MarketWidget />
       <Footer />
     </main>
   );
