@@ -128,9 +128,9 @@
     @apply text-xl font-medium text-navy border-b border-navy/30 pb-2 mb-4;
   }
   
-  /* Section divider */
+  /* Section divider with more prominent navy blue styling */
   .section-divider {
-    @apply w-full h-px bg-navy/50 my-1;
+    @apply w-full h-2 bg-navy my-1;
   }
 }
 

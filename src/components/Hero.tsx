@@ -104,8 +104,8 @@ const Hero = () => {
       
       {/* Content */}
       <div className="section-container relative z-10 flex flex-col items-center justify-center">
-        {/* Main heading bordered as in wireframe */}
-        <div className="w-full max-w-3xl mx-auto border border-gold/50 py-4 px-6 mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        {/* Main heading - centered without border */}
+        <div className="w-full max-w-3xl mx-auto text-center mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium">
             Connecting <span className="text-gradient">Artificial Intelligence</span>, Finance & Sales Strategies
           </h1>
@@ -113,8 +113,8 @@ const Hero = () => {
         
         {/* Hero Section with Image and Featured Posts side by side */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
-          {/* Profile Image - Takes 4/12 columns in desktop and vertically centered */}
-          <div className="lg:col-span-4 flex items-center justify-center mb-6 lg:mb-0">
+          {/* Profile Image - Takes 4/12 columns in desktop - centered vertically with both rows */}
+          <div className="lg:col-span-4 flex items-center justify-center mb-6 lg:mb-0 lg:self-center">
             <div className="w-full max-w-xs overflow-hidden rounded-lg border border-gold/30 transition-all duration-300 hover:scale-[1.02] hover:border-gold/70">
               <AspectRatio ratio={3/4} className="bg-muted">
                 <img 
@@ -141,8 +141,8 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Specialization Description */}
-        <div className="border border-navy/50 p-6 max-w-4xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        {/* Specialization Description - now centered */}
+        <div className="border border-navy/50 p-6 max-w-4xl mx-auto mb-8 animate-fade-in text-center" style={{ animationDelay: '0.4s' }}>
           <p className="text-body-lg text-muted-foreground">
             Specialized in developing AI solutions for sales optimization and financial markets, 
             with research background in Deep Reinforcement Learning.

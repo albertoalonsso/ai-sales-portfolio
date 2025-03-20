@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Section from '@/components/ui/Section';
 import { ArrowRight } from 'lucide-react';
@@ -60,7 +59,6 @@ const Projects = () => {
       </h2>
       
       <div className="flex flex-col lg:flex-row gap-8 items-start">
-        {/* Project Tabs */}
         <div className="lg:w-1/4">
           <div className="sticky top-24 space-y-4">
             <h3 className="text-lg font-medium mb-4">Project Categories</h3>
@@ -97,7 +95,6 @@ const Projects = () => {
           </div>
         </div>
         
-        {/* Project Content */}
         <div className="lg:w-3/4">
           <Card className="overflow-hidden border-none shadow-lg">
             <div className="relative h-40 bg-gradient-to-r from-navy to-navy/70">
