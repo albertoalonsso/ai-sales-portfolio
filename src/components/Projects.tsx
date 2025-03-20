@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Section from '@/components/ui/Section';
 import { ArrowRight } from 'lucide-react';
@@ -53,7 +52,7 @@ const Projects = () => {
   const activeProject = activeTab === 'ai' ? projects.ai : projects.telecom;
 
   return (
-    <Section id="projects">
+    <Section id="projects" className="main-section bg-gradient-to-b from-background to-navy/5">
       <div className="pill-accent mb-4">Research Projects</div>
       <h2 className="heading-lg mb-8">
         Featured <span className="text-gradient">Research</span>

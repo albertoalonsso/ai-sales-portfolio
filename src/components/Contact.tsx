@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="main-section bg-gradient-to-b from-background to-navy/5">
       <div className="text-center mb-12">
         <div className="pill-accent mb-4">Contact</div>
         <h2 className="heading-lg mb-4">
