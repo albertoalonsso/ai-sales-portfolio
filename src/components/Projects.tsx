@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import Section from '@/components/ui/Section';
 import { ArrowRight } from 'lucide-react';
 import Button from './ui/Button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Brain, Network, BookOpen } from 'lucide-react';
 
 const Projects = () => {
