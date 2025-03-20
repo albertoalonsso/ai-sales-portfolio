@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { AspectRatio } from './ui/aspect-ratio';
 import { Link } from 'react-router-dom';
@@ -133,7 +132,11 @@ const Hero = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {featuredPosts.map((post, index) => (
-                <Link to={`/blog/${post.id}`} key={post.id} className="transition-transform duration-300 hover:-translate-y-1">
+                <Link 
+                  to={`/blog/${post.id}`} 
+                  key={post.id} 
+                  className="transition-transform duration-300 hover:-translate-y-1"
+                >
                   <BlogPostCard post={{...post, index}} index={index} />
                 </Link>
               ))}

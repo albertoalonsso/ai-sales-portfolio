@@ -1,4 +1,3 @@
-
 import { NewsletterEntry, NewsletterResponse, Subscriber } from '@/models/newsletter';
 
 // Mock data for the newsletter entries
@@ -9,12 +8,12 @@ const mockNewsletterEntries: NewsletterEntry[] = [
     slug: "reinforcement-learning-financial-markets",
     content: "# Reinforcement Learning in Financial Markets\n\nIn recent years, the application of Reinforcement Learning (RL) in financial markets has gained significant traction...",
     excerpt: "Exploring how RL is transforming portfolio optimization and trading strategies in today's dynamic markets.",
-    coverImage: "/images/blog/rl-finance.jpg",
+    coverImage: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
     publishedDate: "2024-06-15",
     lastModified: "2024-06-15",
     author: {
       name: "Alberto Alonso",
-      avatar: "/images/alberto.jpg",
+      avatar: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
       title: "AI Sales Engineer"
     },
     tags: ["AI & Finance", "Reinforcement Learning", "Portfolio Optimization"],
@@ -30,12 +29,12 @@ const mockNewsletterEntries: NewsletterEntry[] = [
     slug: "5g-iot-industrial-environments",
     content: "# The Future of 5G and IoT in Industrial Environments\n\nThe convergence of 5G connectivity and Internet of Things (IoT) technology is revolutionizing industrial environments...",
     excerpt: "How next-generation connectivity is enabling unprecedented automation and data analytics in manufacturing.",
-    coverImage: "/images/blog/5g-iot.jpg",
+    coverImage: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
     publishedDate: "2024-06-02",
     lastModified: "2024-06-05",
     author: {
       name: "Alberto Alonso",
-      avatar: "/images/alberto.jpg",
+      avatar: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
       title: "AI Sales Engineer"
     },
     tags: ["Technology", "IoT", "5G", "Industry"],
@@ -51,12 +50,12 @@ const mockNewsletterEntries: NewsletterEntry[] = [
     slug: "nlp-analysis-financial-communications",
     content: "# NLP Analysis: Extracting Value from Financial Communications\n\nNatural Language Processing (NLP) has emerged as a powerful tool for analyzing financial communications...",
     excerpt: "Techniques for analyzing earnings calls and financial reports to gain market insights using natural language processing.",
-    coverImage: "/images/blog/nlp-finance.jpg",
+    coverImage: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
     publishedDate: "2024-05-23",
     lastModified: "2024-05-25",
     author: {
       name: "Alberto Alonso",
-      avatar: "/images/alberto.jpg",
+      avatar: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
       title: "AI Sales Engineer"
     },
     tags: ["AI & Finance", "NLP", "Financial Analysis"],

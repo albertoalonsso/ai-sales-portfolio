@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -33,6 +32,11 @@ const BlogPostCard = ({ post, index = 0 }: { post: BlogPost; index?: number }) =
     avatar: "/lovable-uploads/4618583b-b2b8-4dd4-9cb2-a0786c92b99f.png",
     initials: "AA"
   };
+
+  // Aseguramos que la ruta de la imagen sea absoluta
+  const avatarUrl = author.avatar.startsWith('/') 
+    ? author.avatar 
+    : `/${author.avatar}`;
 
   return (
     <Card 
@@ -85,8 +89,8 @@ const BlogPostCard = ({ post, index = 0 }: { post: BlogPost; index?: number }) =
             
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center gap-2">
-                <Avatar className="h-8 w-8">
-                  <AvatarImage src={author.avatar} alt={author.name} />
+                <Avatar className="h-8 w-8 bg-navy/10">
+                  <AvatarImage src={avatarUrl} alt={author.name} />
                   <AvatarFallback>{author.initials}</AvatarFallback>
                 </Avatar>
                 <div className={isAlternate ? "text-white/80" : "text-muted-foreground"}>

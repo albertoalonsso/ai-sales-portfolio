@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNewsletterEntry } from '@/hooks/useNewsletter';
 import { Button } from '@/components/ui/button';
@@ -80,11 +79,21 @@ const NewsletterDetail = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <img
-            src={entry.author.avatar}
-            alt={entry.author.name}
-            className="h-12 w-12 rounded-full object-cover"
-          />
+          {entry.author.avatar && (
+            <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
+              <img
+                src={entry.author.avatar}
+                alt={entry.author.name}
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  // Si la imagen falla, mostrar las iniciales como fallback
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerText = entry.author.name.split(' ').map(n => n[0]).join('');
+                  e.currentTarget.parentElement!.classList.add('flex', 'items-center', 'justify-center', 'bg-navy', 'text-white');
+                }}
+              />
+            </div>
+          )}
           <div>
             <div className="font-medium">{entry.author.name}</div>
             <div className="text-sm text-muted-foreground">{entry.author.title}</div>
@@ -98,7 +107,11 @@ const NewsletterDetail = () => {
           <img 
             src={entry.coverImage} 
             alt={entry.title} 
-            className="w-full h-auto"
+            className="w-full h-auto object-cover"
+            onError={(e) => {
+              // Si la imagen falla, ocultar el contenedor para evitar espacios vacíos
+              e.currentTarget.parentElement!.style.display = 'none';
+            }}
           />
         </div>
       )}
