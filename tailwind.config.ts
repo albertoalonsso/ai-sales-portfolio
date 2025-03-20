@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -129,6 +128,10 @@ export default {
 				},
 				'shimmer': {
 					'100%': { transform: 'translateX(100%)' }
+				},
+				'ticker': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
 				}
 			},
 			animation: {
@@ -140,7 +143,8 @@ export default {
 				'slide-in-from-left': 'slide-in-from-left 0.7s ease-out forwards',
 				'blur-in': 'blur-in 0.7s ease-out forwards',
 				'rotate-in': 'rotate-in 0.7s ease-out forwards',
-				'image-glow': 'image-glow 1.5s ease-in-out infinite alternate'
+				'image-glow': 'image-glow 1.5s ease-in-out infinite alternate',
+				'ticker': 'ticker 30s linear infinite'
 			}
 		}
 	},
