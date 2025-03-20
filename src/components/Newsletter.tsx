@@ -77,7 +77,7 @@ const Newsletter = () => {
 
   return (
     <Section id="newsletter" className="main-section bg-gradient-to-b from-background to-navy/5">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <div className="pill-accent mb-4">Blog & Newsletter</div>
           <h2 className="heading-lg mb-4">
