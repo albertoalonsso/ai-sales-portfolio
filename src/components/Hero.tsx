@@ -169,6 +169,14 @@ const Hero = () => {
           >
             View Projects
           </Button>
+          <Link to="/blog">
+            <Button 
+              variant="outline" 
+              size="lg"
+            >
+              More News
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

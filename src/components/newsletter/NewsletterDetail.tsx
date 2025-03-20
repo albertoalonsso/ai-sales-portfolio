@@ -2,7 +2,7 @@ import React from 'react';
 import { useNewsletterEntry } from '@/hooks/useNewsletter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Clock, ArrowLeft, MessageSquare, Share2, Bookmark } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, MessageSquare, Share2, Bookmark } from 'lucide-react';
 import { toast } from 'sonner';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -34,8 +34,8 @@ const NewsletterDetail = () => {
         <h2 className="text-2xl font-bold mb-4">Article Not Found</h2>
         <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist or has been removed.</p>
         <Button onClick={() => navigate('/blog')}>
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Newsletter
+          Go to More News
+          <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     );
@@ -49,8 +49,8 @@ const NewsletterDetail = () => {
         className="mb-8" 
         onClick={() => navigate('/blog')}
       >
-        <ArrowLeft className="mr-2 h-4 w-4" />
-        Back to Newsletter
+        Go to More News
+        <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
       
       {/* Article header */}
